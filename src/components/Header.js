@@ -1,26 +1,26 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Heared = ({ text, bgColor, textColor }) => {
+const Header = ({ text }) => {
   return (
     <header>
-      <div>
-        <h2>Привіт, Всесвіте!</h2>
+      <div className="container">
+        <h2>{text}</h2>
       </div>
     </header>
   );
 };
 
-Heared.defaultProps = {
-  text: "Hello",
+Header.defaultProps = {
+  text: "Опитувальник UI",
   bgColor: "rgba(0,0,0,0.4)",
   textColor: "#ff6095",
 };
 
-Heared.propTypes = {
+Header.propTypes = {
   text: PropTypes.string,
   bgColor: PropTypes.string,
   textColor: PropTypes.string,
 };
 
-export default Heared;
+export default Header;
