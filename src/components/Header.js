@@ -1,9 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Header = ({ text }) => {
+const Header = ({ text, textColor, bgColor }) => {
+  const MyStyles = {
+    backgroundColor: bgColor,
+    color: textColor,
+  };
   return (
-    <header>
+    <header style={MyStyles}>
       <div className="container">
         <h2>{text}</h2>
       </div>
