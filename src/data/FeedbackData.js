@@ -11,7 +11,7 @@ const FeedbackData = [
   },
   {
     id: 3,
-    rating: 8,
+    rating: 7,
     text: "asdfasdf lskaa sdfj asdf asdf ",
   },
 ];
