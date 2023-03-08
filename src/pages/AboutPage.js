@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from "../shared/Card";
-
+import {Link} from "react-router-dom";
 const AboutPage = () => {
     return (
         <Card>
@@ -8,7 +8,7 @@ const AboutPage = () => {
                 <h1>Про цей додаток</h1>
                 <p>Зворотній зв'язок</p>
                 <p>Версія: 0.0.1</p>
-                <a href="/">На домашню сторінку</a>
+                <Link to="/">На домашню сторінку</Link>
             </div>
         </Card>
     );

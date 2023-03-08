@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
+import {BrowserRouter as Router, NavLink, Route, Routes} from 'react-router-dom'
 import {v4 as uuidv4} from 'uuid'
 import Header from "./components/Header";
 import FeedbackData from "./data/FeedbackData";
@@ -7,6 +7,8 @@ import FeedbackList from "./components/FeedbackList";
 import FeedbackStat from "./components/FeedbackStat";
 import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./pages/AboutPage";
+import AboutIconLink from "./components/AboutIconLink";
+import Card from "./shared/Card";
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -35,8 +37,16 @@ function App() {
               </>}/>
               <Route path='/about' element={<AboutPage />}/>
           </Routes>
+          <Card>
+              <NavLink to={'/'} activeClassName={'active'}>
+                  Додому
+              </NavLink>
+              <NavLink to={'/about'} activeClassName={'active'}>
+                  Про нас
+              </NavLink>
+          </Card>
 
-
+        <AboutIconLink />
       </div>
     </Router>
   );
