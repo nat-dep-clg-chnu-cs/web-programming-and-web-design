@@ -1,14 +1,31 @@
 import React from 'react';
-import {useParams} from "react-router-dom";
+import {Routes, Route, Navigate, useNavigate} from "react-router-dom";
+import Card from "../shared/Card";
 
 const Posts = () => {
-    const params = useParams()
-    console.log(params)
+
+    const status = 200
+
+    const navigate = useNavigate()
+
+    if (status === 404){
+        return <Navigate to={'/pagenotfound'}/>
+    }
+
+    const onClick = () => {
+        console.log('Hello')
+        navigate('/about')
+    }
+
     return (
-        <div>
-            <h1>Post # {params.id}</h1>
-            <h2>Автор: {params.name}</h2>
-        </div>
+        <Card>
+            <h1>Post # </h1>
+            <h2>Автор: </h2>
+            <button onClick={onClick}>Click</button>
+            <Routes>
+                <Route path='/show' element={<h1>Show post</h1>} />
+            </Routes>
+        </Card>
     );
 };
 
