@@ -14,6 +14,11 @@
       "id": 3,
       "text": "Text from backend 3",
       "rating": 8
+    },
+    {
+      "text": "New feedback",
+      "rating": 8,
+      "id": 4
     }
   ]
 }
